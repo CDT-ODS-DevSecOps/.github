@@ -2,7 +2,7 @@
     "name": "CDT-ODS Main Branch .Net app w/ EF Core Database",
     "description": "CDT-ODS CI/CD starter workflow for main branch .Net app w/ EF Core.",
     "categories": [
-        "deployment"
+        "Deployment"
     ],
     "filePatterns": [
         "^Dockerfile",
