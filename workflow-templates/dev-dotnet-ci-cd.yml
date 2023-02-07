@@ -11,7 +11,7 @@ on:
 
 jobs:
   build:
-    uses: officeofenterprisetechnology/reusable-workflows/.github/workflows/dotnet-app-and-db-build-test.yml@main
+    uses: CDT-ODS-DevSecOps/reusable-workflows/.github/workflows/dotnet-app-and-db-build-test.yml@main
     with:
       dotnet-version: '6.0.x'
       build-configuration: Release
@@ -23,7 +23,7 @@ jobs:
   deploy:
     needs: build
     if: github.event_name != 'pull_request'
-    uses: officeofenterprisetechnology/reusable-workflows/.github/workflows/dotnet-deploy-app-and-database.yml@main
+    uses: CDT-ODS-DevSecOps/reusable-workflows/.github/workflows/dotnet-deploy-app-and-database.yml@main
     with:
       az-appservice-name: 'APP_SERVICE_NAME'
       az-appservice-slot-name: dev
